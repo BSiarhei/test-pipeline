@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Transform: 'AWS::Serverless-2016-10-31'
+Transform: AWS::Serverless-2016-10-31
 Description: An AWS Serverless Specification template describing your function.
 Resources:
   OrderWebHook2:
-    Type: 'AWS::Serverless::Function'
+    Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
       Runtime: nodejs6.10
@@ -11,7 +11,7 @@ Resources:
       Description: ''
       MemorySize: 128
       Timeout: 3
-      Role: 'arn:aws:iam::462029873890:role/service-role/OrderMicroserviceRole'
+      Role: arn:aws:iam::462029873890:role/service-role/OrderMicroserviceRole
       Events:
         Api1:
           Type: Api
